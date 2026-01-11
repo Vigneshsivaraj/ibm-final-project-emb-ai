@@ -16,6 +16,10 @@ def emotion_detector(text_to_analyse):
         'sadness': None,
         'dominant_emotion': None
     }
+
+    if(not text_to_analyse or not text_to_analyse.strip()):
+        return output_format
+        
     dominant_emotion = None
 
     if(response and response.text):
